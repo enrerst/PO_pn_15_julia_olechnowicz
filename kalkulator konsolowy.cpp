@@ -2,19 +2,69 @@
 //
 
 #include <iostream>
+using namespace std;
+double mem;
+bool mem_used;
+double add(double a, double b) { 
+	return a + b; 
+}
+
+double sub(double a, double b) { 
+	return a - b; 
+}
+
+double tim(double a, double b) { 
+	return a * b; 
+}
+
+double div(double a, double b){
+	if (b == 0) {
+		cout << "blad" << endl;
+		return 0;
+	}
+	return a / b;
+}
+
+double mod(double a, double b) { 
+	return a - (int)(a / b) * b; 
+}
+
+void erase(){}
+
+
+void menu() {
+	int opcja;
+	cout << "Kalkulator" << endl;
+	cout << " uzyj + aby dodac" << endl;
+	cout << " uzyj - aby odjac" << endl;
+	cout << " uzyj * aby ponozyc" << endl;
+	cout << " uzyj / aby podzielic" << endl;
+	cout << " uzyj % aby uzyskac reszte" << endl;
+	cout << " napisz usun aby wyczyscic" << endl;
+	cin >> opcja;
+
+	switch (opcja) {
+
+	case '+':
+		mem = add(a, b);
+		break;
+	case '-':
+		mem = sub(a, b);
+		break;
+	case '*':
+		mem = tim(a, b);
+	case '/':
+		mem = div(a, b);
+	case '%':
+		mem = mod(a, b);
+
+
+	}
+
+}
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
 }
-
-// Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
-// Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
-
-// Porady dotyczące rozpoczynania pracy:
-//   1. Użyj okna Eksploratora rozwiązań, aby dodać pliki i zarządzać nimi
-//   2. Użyj okna programu Team Explorer, aby nawiązać połączenie z kontrolą źródła
-//   3. Użyj okna Dane wyjściowe, aby sprawdzić dane wyjściowe kompilacji i inne komunikaty
-//   4. Użyj okna Lista błędów, aby zobaczyć błędy
-//   5. Wybierz pozycję Projekt > Dodaj nowy element, aby utworzyć nowe pliki kodu, lub wybierz pozycję Projekt > Dodaj istniejący element, aby dodać istniejące pliku kodu do projektu
-//   6. Aby w przyszłości ponownie otworzyć ten projekt, przejdź do pozycji Plik > Otwórz > Projekt i wybierz plik sln
