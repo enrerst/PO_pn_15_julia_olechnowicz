@@ -53,35 +53,45 @@ void menu() {
 		cout << " uzyj / aby podzielic" << endl;
 		cout << " uzyj % aby uzyskac reszte" << endl;
 		cout << " napisz e aby wyczyscic" << endl;
+		cout << " napisz q aby wyjsc" << endl;
 
 
-		cout << "Podaj pierwsza liczbe";
+		cout << "Podaj pierwsza liczbe ";
 		cin >> a;
-		cout << "Podaj opcje";
+		cout << "Podaj opcje ";
 		cin >> opcja;
-		cout << "Podaj druga liczbe";
+
+		if (opcja == 'e') {
+			erase();
+		}
+
+		if (opcja == 'q') {
+			break;
+		}
+
+		cout << "Podaj druga liczbe ";
 		cin >> b;
 
 		switch (opcja) {
 
-		case '+':
-			mem = add(a, b);
-			break;
-		case '-':
-			mem = sub(a, b);
-			break;
-		case '*':
-			mem = tim(a, b);
-			break;
-		case '/':
-			mem = div(a, b);
-			break;
-		case '%':
-			mem = mod(a, b);
-			break;
-		default:
-			cout << "???????" << endl;
-			continue;
+			case '+':
+				mem = add(a, b);
+				break;
+			case '-':
+				mem = sub(a, b);
+				break;
+			case '*':
+				mem = tim(a, b);
+				break;
+			case '/':
+				mem = div(a, b);
+				break;
+			case '%':
+				mem = mod(a, b);
+				break;
+			default:
+				cout << "???????" << endl;
+				continue;
 
 		}
 
