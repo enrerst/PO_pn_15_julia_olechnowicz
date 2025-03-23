@@ -1,10 +1,13 @@
-﻿// kalkulator konsolowy.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+// kalkulator konsolowy.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
 //
 
 #include <iostream>
 using namespace std;
-double mem;
-bool mem_used;
+
+double mem = 0;
+
+bool mem_used = false;
+
 double add(double a, double b) { 
 	return a + b; 
 }
@@ -29,8 +32,12 @@ double mod(double a, double b) {
 	return a - (int)(a / b) * b; 
 }
 
-void erase(){}
+void erase(){
+	mem = 0;
+	mem_used = false;
+	cout << "Akumulator jest pust" << endl;
 
+}
 
 void menu() {
 	int opcja;
@@ -40,7 +47,7 @@ void menu() {
 	cout << " uzyj * aby ponozyc" << endl;
 	cout << " uzyj / aby podzielic" << endl;
 	cout << " uzyj % aby uzyskac reszte" << endl;
-	cout << " napisz usun aby wyczyscic" << endl;
+	cout << " napisz e aby wyczyscic" << endl;
 	cin >> opcja;
 
 	switch (opcja) {
