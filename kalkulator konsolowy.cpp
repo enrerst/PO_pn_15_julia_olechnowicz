@@ -6,7 +6,7 @@ using namespace std;
 
 class Kalkulator {
 
-//podpowiedz: tutaj dodac paradygmaty private
+//tutaj dodac paradygmaty private
 	bool mem_used = false;
 	double mem;
 
