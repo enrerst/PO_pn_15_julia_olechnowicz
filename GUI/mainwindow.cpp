@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -93,6 +94,7 @@ void MainWindow::on_rowne_clicked()
     }
 
     if (opPos == -1) {
+        QMessageBox::warning(this, "Błąd", "Nie znaleziono operatora!");
         return;
     }
 
@@ -104,6 +106,7 @@ void MainWindow::on_rowne_clicked()
         ui->wyswietlacz->setText(QString::number(result));
     }
     catch (const std::exception& e) {
+        QMessageBox::critical(this, "Błąd", e.what());
         ui->wyswietlacz->clear();
     }
 
