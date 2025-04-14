@@ -80,7 +80,7 @@ void MainWindow::on_rowne_clicked()
 {
     QString text = ui->wyswietlacz->text();
 
-    // Szukamy operatora
+    
     int opPos = -1;
     char op = '\0';
 
@@ -94,7 +94,6 @@ void MainWindow::on_rowne_clicked()
     }
 
     if (opPos == -1) {
-        QMessageBox::warning(this, "Błąd", "Nie znaleziono operatora!");
         return;
     }
 
@@ -106,11 +105,11 @@ void MainWindow::on_rowne_clicked()
         ui->wyswietlacz->setText(QString::number(result));
     }
     catch (const std::exception& e) {
-        QMessageBox::critical(this, "Błąd", e.what());
         ui->wyswietlacz->clear();
     }
 
 }
+
 
 
 void MainWindow::on_czysc_clicked()
