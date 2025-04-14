@@ -9,19 +9,19 @@ class klasa_kalkulator : public QObject
 public:
     explicit klasa_kalkulator(QObject *parent = nullptr);
 
-    double oblicz(double a, double b, char op);  // było calculate
-    void wyczysc();                             // było clear
-    double pobierzPamiec() const;               // było getMemory
+    double oblicz(double a, double b, char op);  
+    void wyczysc();                             
+    double pobierzPamiec() const;              
 
 private:
-    double pamiec = 0;                          // było mem
-    bool pamiec_uzyta = false;                  // było mem_used
+    double pamiec = 0;
+    bool pamiec_uzyta = false;            
 
-    double dodaj(double a, double b);           // było add
-    double odejmij(double a, double b);         // było sub
-    double pomnoz(double a, double b);          // było tim
-    double podziel(double a, double b);         // było divide
-    double modulo(double a, double b);          // było mod
+    double dodaj(double a, double b);     
+    double odejmij(double a, double b);
+    double pomnoz(double a, double b);
+    double podziel(double a, double b);
+    double modulo(double a, double b);
 };
 
 #endif // CALCULATOR_H
