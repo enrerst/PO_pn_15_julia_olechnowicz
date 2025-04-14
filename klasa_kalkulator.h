@@ -24,4 +24,4 @@ private:
     double modulo(double a, double b);
 };
 
-#endif // CALCULATOR_H
+#endif 
