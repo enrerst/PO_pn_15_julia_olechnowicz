@@ -5,12 +5,12 @@
 Plansza::Plansza(QWidget *parent)
     : QWidget(parent)
 {
-    setFocusPolicy(Qt::StrongFocus); // by reagować na klawisze
+    setFocusPolicy(Qt::StrongFocus); 
     setFixedSize(600, 400);
     setStyleSheet("background-color: black;");
 
     connect(&timer, &QTimer::timeout, this, &Plansza::updateGra);
-    timer.start(150); // co 150 ms przesuwamy węża
+    timer.start(150); 
     int cols = width() / poleSize;
     int rows = height() / poleSize;
     snake.setBoardSize(cols, rows);
@@ -63,5 +63,5 @@ void Plansza::keyPressEvent(QKeyEvent *event)
 void Plansza::updateGra()
 {
     snake.move();
-    update(); // wymusza repaint
+    update(); 
 }
