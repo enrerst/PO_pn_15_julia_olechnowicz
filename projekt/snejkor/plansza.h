@@ -17,12 +17,12 @@ protected:
     void keyPressEvent(QKeyEvent *event) override;
 
 private slots:
-    void updateGra();  // slot do odświeżania gry
+    void updateGra();
 
 private:
     Snake snake;
     QTimer timer;
-    int poleSize = 20; // rozmiar jednego pola na planszy (20x20 px)
+    int poleSize = 20;
 };
 
 #endif // PLANSZA_H
